@@ -1,8 +1,8 @@
 {
-    "name": "JoKenPô - Pedra, Papel e Tesoura",
-    "short_name": "JoKenPô",
+    "name": "Jogo1 - Pedra, Papel e Tesoura",
+    "short_name": "Jogo1",
     "description": "Mini game de pedra, papel e tesoura, contra um bot.",
-    "start_url": "/Jokenpo/",
+    "start_url": "/Jogo1/",
     "scope": "./",
     "display": "standalone",
     "orientation": "portrait-primary",
