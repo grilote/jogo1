@@ -9,40 +9,46 @@
     <title>JoKenPô</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/icon192.png">
+    <meta name="theme-color" content="#ffc400">
 </head>
 
 <body>
     <div class="container_geral">
         <h1>JOGO1</h1>
         <div class="caixas">
-        <div class="container_jogador">
-
-            <h2>Jogador</h2>
-            <div class="container_imgs">
-                <img class="opcoes" src="img/pedra.png" alt="">
-                <img class="opcoes" src="img/papel.png" alt="">
-                <img class="opcoes" src="img/tesoura.png" alt="">
-            </div>
-            <form>
-                <div class="container_radio">
-                    <input class="opcoes-radio" type="radio" name="escolha" id="pedra">Pedra
-                    <input class="opcoes-radio" type="radio" name="escolha" id="papel">Papel
-                    <input class="opcoes-radio" type="radio" name="escolha" id="tesoura">Tesoura
+            <div class="container_jogador">
+                <h2>Jogador</h2>
+                <div class="container_imgs">
+                    <img class="opcoes" src="img/pedra.png" alt="Pedra" data-opcao="pedra" id="img-pedra">
+                    <img class="opcoes" src="img/papel.png" alt="Papel" data-opcao="papel" id="img-papel">
+                    <img class="opcoes" src="img/tesoura.png" alt="Tesoura" data-opcao="tesoura" id="img-tesoura">
                 </div>
-                <p>
-                    <!-- type="button" não tem o comportamento padrão de enviar formulário -->
-                    <input class="button-jogar" type="button" value=" JOGAR " onclick="jogar()">
-                    <input class="button-reset" type="reset" value="reset" onclick="limpa()">
-                </p>
-            </form>
+                <form id="form-escolha">
+                    <div class="container_radio">
+                        <input class="opcoes-radio" type="radio" name="escolha" id="pedra" value="pedra">
+                        <label for="pedra">Pedra</label>
+                        <input class="opcoes-radio" type="radio" name="escolha" id="papel" value="papel">
+                        <label for="papel">Papel</label>
+                        <input class="opcoes-radio" type="radio" name="escolha" id="tesoura" value="tesoura">
+                        <label for="tesoura">Tesoura</label>
+                    </div>
+                    <p>
+                        <input class="button-jogar" type="button" value=" JOGAR " id="jogar-btn">
+                        <input class="button-reset" type="reset" value="reset" id="reset-btn">
+                    </p>
+                </form>
+            </div>
+            <div class="container_computador">
+                <h2>Computador</h2>
+                <div id="container-imagens-pc">
+                  <img src="img/pc.png" alt="Computador" id="pc">
+                  <img src="" alt="Opção do Computador" id="pc-escolha">
+                </div>
+                
+            </div>
         </div>
-        <div class="container_computador">
-
-            <h2>Computador</h2>
-            <img src="img/pc.png" alt="Computador" id="pc">
-
-        </div>
-    </div>
+        <div id="mensagem"></div>
         <h3 id="resultado"></h3>
     </div>
     <script src="app.js"></script>
